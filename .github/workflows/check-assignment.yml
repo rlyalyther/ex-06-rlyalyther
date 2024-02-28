@@ -38,7 +38,7 @@ jobs:
         fi
     - name: Render .qmd to HTML
       if: env.QMD_EXISTS == 'true'
-      run: quarto render ex-06.qmd
+      run: quarto render ex-06.ipynb
     - name: Render .ipynb to HTML
       if: env.QMD_EXISTS == 'false'
       run: quarto render ex-06.ipynb
