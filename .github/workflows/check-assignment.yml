@@ -36,9 +36,6 @@ jobs:
         if [ -f ex-06.ipynb ]; then
           echo "QMD_EXISTS=true" >> $GITHUB_ENV
         fi
-    - name: Render .qmd to HTML
-      if: env.QMD_EXISTS == 'true'
-      run: quarto render ex-06.ipynb
     - name: Render .ipynb to HTML
       if: env.QMD_EXISTS == 'false'
       run: quarto render ex-06.ipynb
